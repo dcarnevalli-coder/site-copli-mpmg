@@ -138,29 +138,52 @@ export default function Home() {
 
             {/* Organograma */}
             <section className="bg-white rounded-2xl shadow-md p-6" aria-labelledby="org-title">
-              <h2 id="org-title" className="text-xl font-bold text-mpmg-azulEscuro mb-6">Estrutura Orgânica da COPLI</h2>
+              <h2 id="org-title" className="text-xl font-bold text-mpmg-azulEscuro mb-6">Estrutura Orgânica</h2>
               <div className="flex flex-col items-center gap-0 select-none">
+
+                {/* PGJ — Chefia */}
                 <div className="bg-mpmg-azulEscuro text-white px-6 py-3 rounded-xl shadow-md text-center">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-blue-300 mb-0.5">Chefia</p>
                   <p className="font-bold text-sm">Procurador-Geral de Justiça</p>
                 </div>
-                <div className="w-0.5 h-6 bg-mpmg-azul" aria-hidden="true" />
+
+                {/* Linha tracejada — assessoramento */}
+                <div className="h-6" style={{ width: 2, borderLeft: '2px dashed #003DA5' }} aria-hidden="true" />
+
+                {/* COPLI — Assessoramento */}
                 <div className="bg-mpmg-azul text-white px-6 py-3 rounded-xl shadow-md text-center">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-blue-200 mb-0.5">Assessoramento</p>
-                  <p className="font-bold text-sm">COPLI — Coordenadoria de Planejamento Institucional</p>
+                  <p className="font-bold text-sm">Coordenadoria de Planejamento Institucional — COPLI</p>
                 </div>
+
+                {/* Linha sólida → SPC */}
+                <div className="w-0.5 h-6 bg-mpmg-azul" aria-hidden="true" />
+
+                {/* SPC */}
+                <div className="bg-mpmg-azulClaro text-white px-6 py-3 rounded-xl shadow-md text-center">
+                  <p className="font-bold text-sm">Superintendência de Planejamento e Coordenação — SPC</p>
+                </div>
+
+                {/* Conector T → 3 Diretorias */}
                 <div className="w-0.5 h-6 bg-mpmg-azul" aria-hidden="true" />
                 <div className="w-full max-w-2xl h-px bg-mpmg-azul" aria-hidden="true" />
+
+                {/* 3 Diretorias */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
-                  {['Setor de Planejamento Estratégico', 'Setor de Modernização Administrativa', 'Diretoria de Gestão Documental (DIGD)'].map((setor) => (
-                    <div key={setor} className="flex flex-col items-center">
+                  {[
+                    'Diretoria de Estrutura e Processos Organizacionais',
+                    'Diretoria de Gestão Documental',
+                    'Diretoria de Planos, Projetos e Programas Institucionais',
+                  ].map((diretoria) => (
+                    <div key={diretoria} className="flex flex-col items-center">
                       <div className="w-0.5 h-6 bg-mpmg-azul" aria-hidden="true" />
                       <div className="bg-blue-50 border-2 border-mpmg-azul text-mpmg-azulEscuro px-4 py-3 rounded-xl text-center w-full">
-                        <p className="font-semibold text-xs leading-tight">{setor}</p>
+                        <p className="font-semibold text-xs leading-tight">{diretoria}</p>
                       </div>
                     </div>
                   ))}
                 </div>
+
               </div>
             </section>
 
