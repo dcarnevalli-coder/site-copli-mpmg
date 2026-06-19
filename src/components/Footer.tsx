@@ -1,4 +1,5 @@
-import { MapPin, Phone, Clock, ExternalLink, Scale } from 'lucide-react'
+import { MapPin, Phone, Clock, ExternalLink } from 'lucide-react'
+import logo from '../assets/mpmg-logo-negativo.png'
 
 export default function Footer() {
   return (
@@ -7,14 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Identidade */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-white rounded-lg p-1.5">
-                <Scale className="w-5 h-5 text-mpmg-azulEscuro" aria-hidden="true" />
-              </div>
-              <div>
-                <p className="font-extrabold text-lg leading-none">MPMG</p>
-                <p className="text-blue-300 text-xs">Ministério Público de Minas Gerais</p>
-              </div>
+            <div className="mb-4">
+              <img src={logo} alt="MPMG — Ministério Público de Minas Gerais" className="h-9 w-auto" />
             </div>
             <p className="text-blue-200 text-sm leading-relaxed">
               Coordenadoria de Planejamento Institucional — COPLI

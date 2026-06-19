@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Menu, X, Scale, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
+import logo from '../assets/mpmg-logo-negativo.png'
 
 const navItems = [
   { label: 'Início', to: '/', end: true },
@@ -26,20 +27,10 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3 group" aria-label="Página inicial COPLI MPMG">
-            <div className="bg-white rounded-lg p-1.5 flex items-center justify-center">
-              <Scale className="w-6 h-6 text-mpmg-azulEscuro" aria-hidden="true" />
-            </div>
-            <div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-xl font-extrabold tracking-tight text-white">MPMG</span>
-                <span className="hidden sm:inline text-xs text-blue-200 font-normal">
-                  Ministério Público de Minas Gerais
-                </span>
-              </div>
-              <p className="text-[10px] text-blue-300 leading-none hidden sm:block">
-                Coordenadoria de Planejamento Institucional — COPLI
-              </p>
-            </div>
+            <img src={logo} alt="MPMG — Ministério Público de Minas Gerais" className="h-10 w-auto" />
+            <p className="text-[10px] text-blue-300 leading-none hidden sm:block">
+              Coordenadoria de Planejamento Institucional — COPLI
+            </p>
           </NavLink>
 
           {/* Nav desktop */}
