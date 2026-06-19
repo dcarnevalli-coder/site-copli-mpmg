@@ -9,6 +9,7 @@ const OKResultados = lazy(() => import('./pages/OKResultados'))
 const Inovacao = lazy(() => import('./pages/Inovacao'))
 const EscritorioProjetos = lazy(() => import('./pages/EscritorioProjetos'))
 const Premiacoes = lazy(() => import('./pages/Premiacoes'))
+const ProcessosOrganizacionais = lazy(() => import('./pages/ProcessosOrganizacionais'))
 
 function PageLoader() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/inovacao" element={<Inovacao />} />
           <Route path="/escritorio-de-projetos" element={<EscritorioProjetos />} />
           <Route path="/premiacoes" element={<Premiacoes />} />
+          <Route path="/processos-organizacionais" element={<ProcessosOrganizacionais />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

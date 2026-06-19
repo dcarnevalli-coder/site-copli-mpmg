@@ -8,6 +8,7 @@ import {
   Target,
   FolderKanban,
   Trophy,
+  Workflow,
 } from 'lucide-react'
 
 const sidebarItems = [
@@ -16,6 +17,7 @@ const sidebarItems = [
   { label: 'Programa OKResultados', to: '/okresultados', icon: Target, description: 'Metodologia OKR', end: false },
   { label: 'Inovação', to: '/inovacao', icon: Lightbulb, description: 'Iniciativas inovadoras', end: false },
   { label: 'Escritório de Projetos', to: '/escritorio-de-projetos', icon: FolderKanban, description: 'Gestão de projetos', end: false },
+  { label: 'Processos Organizacionais', to: '/processos-organizacionais', icon: Workflow, description: 'Diretoria de Estrutura e Processos', end: false },
   { label: 'Premiações', to: '/premiacoes', icon: Trophy, description: 'Prêmios e reconhecimentos', end: false },
   { label: 'SEI', to: '/sei', icon: Monitor, description: 'Sistema Eletrônico de Informações', end: false },
   { label: 'Gestão de Documentos', to: '/gestao-documentos', icon: Archive, description: 'Diretoria de Gestão Documental', end: false },
