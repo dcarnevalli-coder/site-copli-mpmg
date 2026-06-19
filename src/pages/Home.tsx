@@ -150,38 +150,64 @@ export default function Home() {
                 {/* Linha tracejada — assessoramento */}
                 <div className="h-6" style={{ width: 2, borderLeft: '2px dashed #003DA5' }} aria-hidden="true" />
 
-                {/* COPLI — Assessoramento */}
+                {/* COPLI */}
                 <div className="bg-mpmg-azul text-white px-6 py-3 rounded-xl shadow-md text-center">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-blue-200 mb-0.5">Assessoramento</p>
-                  <p className="font-bold text-sm">Coordenadoria de Planejamento Institucional — COPLI</p>
+                  <p className="font-bold text-sm leading-tight">Coordenadoria de Planejamento Institucional</p>
+                  <p className="text-xs font-bold text-blue-200 mt-0.5">COPLI</p>
                 </div>
 
                 {/* Linha sólida → SPC */}
                 <div className="w-0.5 h-6 bg-mpmg-azul" aria-hidden="true" />
 
-                {/* SPC */}
+                {/* SPC — texto em 2 linhas */}
                 <div className="bg-mpmg-azulClaro text-white px-6 py-3 rounded-xl shadow-md text-center">
-                  <p className="font-bold text-sm">Superintendência de Planejamento e Coordenação — SPC</p>
+                  <p className="font-bold text-sm leading-tight">Superintendência de Planejamento e Coordenação</p>
+                  <p className="text-xs font-bold text-blue-200 mt-0.5">SPC</p>
                 </div>
 
-                {/* Conector T → 3 Diretorias */}
+                {/* Linha vertical central → T */}
                 <div className="w-0.5 h-6 bg-mpmg-azul" aria-hidden="true" />
-                <div className="w-full max-w-2xl h-px bg-mpmg-azul" aria-hidden="true" />
 
-                {/* 3 Diretorias */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
-                  {[
-                    'Diretoria de Estrutura e Processos Organizacionais',
-                    'Diretoria de Gestão Documental',
-                    'Diretoria de Planos, Projetos e Programas Institucionais',
-                  ].map((diretoria) => (
-                    <div key={diretoria} className="flex flex-col items-center">
-                      <div className="w-0.5 h-6 bg-mpmg-azul" aria-hidden="true" />
-                      <div className="bg-blue-50 border-2 border-mpmg-azul text-mpmg-azulEscuro px-4 py-3 rounded-xl text-center w-full">
-                        <p className="font-semibold text-xs leading-tight">{diretoria}</p>
+                {/* 3 Diretorias — barra horizontal alinhada aos centros das colunas */}
+                <div className="relative w-full max-w-2xl">
+                  {/* Barra horizontal: do centro da col-1 (1/6) ao centro da col-3 (5/6) */}
+                  <div
+                    className="absolute top-0 h-px bg-mpmg-azul"
+                    style={{ left: 'calc(100% / 6)', right: 'calc(100% / 6)' }}
+                    aria-hidden="true"
+                  />
+                  {/* Mobile: coluna simples */}
+                  <div className="flex flex-col items-center gap-2 sm:hidden">
+                    {[
+                      'Diretoria de Estrutura e Processos Organizacionais',
+                      'Diretoria de Gestão Documental',
+                      'Diretoria de Planos, Projetos e Programas Institucionais',
+                    ].map((d) => (
+                      <div key={d} className="flex flex-col items-center w-full">
+                        <div className="w-0.5 h-4 bg-mpmg-azul" aria-hidden="true" />
+                        <div className="bg-blue-50 border-2 border-mpmg-azul text-mpmg-azulEscuro px-4 py-3 rounded-xl text-center w-full">
+                          <p className="font-semibold text-xs leading-tight">{d}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                  {/* Desktop: flex row, conectores verticais saindo da barra */}
+                  <div className="hidden sm:flex">
+                    {[
+                      'Diretoria de Estrutura e Processos Organizacionais',
+                      'Diretoria de Gestão Documental',
+                      'Diretoria de Planos, Projetos e Programas Institucionais',
+                    ].map((d, i) => (
+                      <div key={d} className="flex-1 flex flex-col items-center">
+                        <div className="w-0.5 h-6 bg-mpmg-azul" aria-hidden="true" />
+                        <div className={`w-full ${i === 0 ? 'pr-2' : i === 2 ? 'pl-2' : 'px-2'}`}>
+                          <div className="bg-blue-50 border-2 border-mpmg-azul text-mpmg-azulEscuro px-3 py-3 rounded-xl text-center">
+                            <p className="font-semibold text-xs leading-tight">{d}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
               </div>
