@@ -72,7 +72,7 @@ export default function Home() {
             <section className="bg-white rounded-2xl shadow-md p-6 border-l-4 border-mpmg-azul" aria-labelledby="sobre-title">
               <h2 id="sobre-title" className="text-xl font-bold text-mpmg-azulEscuro mb-3">O que é a COPLI?</h2>
               <p className="text-mpmg-cinzaTexto leading-relaxed text-sm">
-                A COPLI é órgão de assessoramento do Procurador-Geral de Justiça e tem como
+                A Coordenadoria de Planejamento Institucional (COPLI) é órgão de assessoramento do Procurador-Geral de Justiça e tem como
                 finalidade programar, desenvolver, orientar, acompanhar e avaliar as atividades
                 de planejamento, de modernização administrativa e de gestão de documentos, bem
                 como as de construção de indicadores de desempenho institucional e de
